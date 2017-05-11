@@ -1,0 +1,10 @@
+class Solution(object):
+    def distributeCandies(self, candies):
+        """
+        :type candies: List[int]
+        :rtype: int
+        """
+        cd_len  = len(candies)
+        kind_len= len(set(candies))
+        sister_cd = kind_len if kind_len<=cd_len/2 else int(cd_len/2)
+        return sister_cd
