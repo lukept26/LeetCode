@@ -1,0 +1,12 @@
+class Solution(object):
+    def hammingDistance(self, x, y):
+        """
+        :type x: int
+        :type y: int
+        :rtype: int
+        """
+        a = str(bin(x)).lstrip('0b').zfill(32)
+        b = str(bin(y)).lstrip('0b').zfill(32)
+        c = [i for i, j in zip(a, b) if i == j]
+        return(32 - len(c))
+        #39ms
